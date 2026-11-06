@@ -26,6 +26,10 @@ using data and the OCR prompt from [KITAB-Bench](https://github.com/mbzuai-oryx/
 
 Training loss fell from 0.87 to 0.47 over 38 steps.
 
+| Step | 5 | 10 | 15 | 20 | 25 | 30 | 35 |
+|---|---|---|---|---|---|---|---|
+| Loss | 0.87 | 0.75 | 0.76 | 0.67 | 0.61 | 0.56 | 0.47 |
+
 ## Failure cases (worst 3 of 30 in-domain samples)
 1. **Dot-dependent letters confused:** *نظاما → بظامما*, *حراريا → خرازيا*. Letters that
    differ only in dots (ن/ب, ح/خ, ر/ز) get swapped.
@@ -43,8 +47,15 @@ Training loss fell from 0.87 to 0.47 over 38 steps.
 - KITAB-Bench evaluates 7B models; this uses 2B, so numbers are **not comparable**
   with the paper
 
+## Next steps
+- Repeat with several seeds and report mean and spread
+- Train on more and more varied data (real scans, handwriting)
+- Hold out a validation set and tune epochs and LoRA rank
+- Try the 7B model and the full KITAB-Bench OCR split for a comparison closer to the paper
+  
 ## Reproduce
 Open `notebook.ipynb` on a Colab T4. The adapter is in `qwen2vl-arabic-ocr-lora/`.
+The LoRA adapter is on Hugging Face: [base_model: HuggingFaceH4/zephyr-7b-beta](https://huggingface.co/moneebaa/qwen2vl-arabic-ocr-lora/tree/main)
 
 ## Credits
 KITAB-Bench (MBZUAI-Oryx), Qwen2-VL (Alibaba), Hugging Face Transformers and PEFT.
