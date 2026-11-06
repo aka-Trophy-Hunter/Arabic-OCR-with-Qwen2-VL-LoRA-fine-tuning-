@@ -54,8 +54,8 @@ Training loss fell from 0.87 to 0.47 over 38 steps.
 - Try the 7B model and the full KITAB-Bench OCR split for a comparison closer to the paper
   
 ## Reproduce
-Open `notebook.ipynb` on a Colab T4. The adapter is in `qwen2vl-arabic-ocr-lora/`.
-The LoRA adapter is on Hugging Face: [base_model: HuggingFaceH4/zephyr-7b-beta](https://huggingface.co/moneebaa/qwen2vl-arabic-ocr-lora/tree/main)
+Open `Arabic_OCR_with_Qwen2_VL_(LoRA_fine_tuning)_.ipynb` on a Colab T4. The adapter is in `qwen2vl-arabic-ocr-lora/`.
+The LoRA adapter is on Hugging Face: https://huggingface.co/moneebaa/qwen2vl-arabic-ocr-lora/tree/main 
 
 ## Credits
 KITAB-Bench (MBZUAI-Oryx), Qwen2-VL (Alibaba), Hugging Face Transformers and PEFT.
